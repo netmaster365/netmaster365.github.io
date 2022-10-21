@@ -6,9 +6,10 @@ h1 {
   color: black;
   text-align: center;
   font-family: "Lucida Console", serif;
+  font-weight: bold;
 }
 
 p {
-  font-family: cursive;
+  font-family: "Brush Script MT", cursive;
   font-size: 20px;
 }
