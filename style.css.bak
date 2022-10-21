@@ -8,6 +8,6 @@ h1 {
 }
 
 p {
-  font-family: cursive;
+  font-family: comic sans ms;
   font-size: 20px;
 }
