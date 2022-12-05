@@ -1,5 +1,6 @@
 body {
   background-color: lightblue;
+  background-image: url("fale.jpg");
 }
 
 h1 {
@@ -11,5 +12,9 @@ h1 {
 
 p {
   font-family: "Brush Script MT", cursive;
+  background-image: url("fale.jpg");
   font-size: 20px;
+}
+p {
+  background-image: url("fale.jpg");
 }
