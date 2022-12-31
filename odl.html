@@ -1,0 +1,35 @@
+<html>
+<head>
+    <title>Odliczanie do 31 grudnia 2022</title>
+</head>
+<body>
+    <h1>Odliczanie do 31 grudnia 2022</h1>
+    <p id="countdown"></p>
+    <script>
+        // Ustawienie daty końcowej
+        var endDate = new Date("December 31, 2022 23:59:59").getTime();
+        // Funkcja odliczająca czas
+        function countDown() {
+            // Pobranie aktualnej daty
+            var now = new Date().getTime();
+            // Obliczenie pozostałego czasu
+            var distance = endDate - now;
+            // Obliczenie dni, godzin, minut i sekund pozostałych do końca odliczania
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            // Wyświetlenie odliczającego się czasu na stronie
+            document.getElementById("countdown").innerHTML = days + " dni " + hours + " godzin "
+            + minutes + " minut " + seconds + " sekund ";
+            // Jeśli czas do końca odliczania minął, wyświetl komunikat "Odliczanie zakończone"
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").innerHTML = "Odliczanie zakończone";
+            }
+        }
+        // Wywołanie funkcji odliczającej co sekundę
+        var countdownInterval = setInterval(countDown, 1000);
+    </script>
+</body>
+</html>
